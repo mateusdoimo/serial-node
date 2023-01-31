@@ -1,5 +1,5 @@
 var { SerialPort } = require("serialport");
-var message = "Hakuna Matata";
+var message = "Olá";
 
 var serialPort = new SerialPort({
     path: 'COM6',

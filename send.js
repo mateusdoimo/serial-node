@@ -1,9 +1,12 @@
-var SerialPort = require("serialport");
-var port = "COM6";
+var { SerialPort } = require("serialport");
 var message = "Hakuna Matata";
 
-var serialPort = new SerialPort(port, {
-    baudRate: 9600
+var serialPort = new SerialPort({
+    path: 'COM6',
+    baudRate: 9600,
+    dataBits: 8,
+    stopBits: 1,
+    parity: 'none',
 });
 
 serialPort.write(message, function (err) {
